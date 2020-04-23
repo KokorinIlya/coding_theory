@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\lstset{
+	language=Octave,
+	frame=single,
+	xleftmargin=.1\textwidth, xrightmargin=.1\textwidth
+}
+\usepackage{graphicx}
+\usepackage{mathtools, nccmath}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2.1cm,bindingoffset=0cm]{geometry}
+\usepackage{amsfonts}
+
+\graphicspath{{/pic}}
+\DeclarePairedDelimiter{\nint}\lfloor\rfloor
+\DeclarePairedDelimiter{\hint}\lceil\rceil
+
+\title{Упражнения из учебника}
+\author{Кокорин Илья, M3439}
+\date{Вариант № 64}
+
+\begin{document}
+	\maketitle
+	\section{Задача 3.7}
+	
+	Граница Грайсмера имеет вид $N(k, d) \geq \sum\limits_{i = 0}^{k - 1} \hint{\frac{d}{2^i}}$
+	
+	Найдём в таблице 3.2 коды с $d = 2$, и для каждого $k$ возьмём минимальное возможное $n$, при котором достигается $d = 8$.
+	
+	Для таких кодов подсчитаем $N(k, d)$ по формуле Грайсмера, и сравним с числом из таблицы 3.2.
+	
+	 Код для генерации пграфиков приложен к заданию.
+	 
+	 Получается следующий график:
+	 
+	 \includegraphics[scale=1]{pic/ns.png}
+	 
+	Как видно из графика, при малых $k$, коды лежат на границе Грайсмера, но потом реально достижимая оптимальная длина кода начинает отдаляться от теоретически вычисленной $N(k, d)$ - минимально допустимой длины кода с заданными парамерами, и при больших $k$ теоретически минимальная длина кода (и,  следовательно,скорость кода) не достигнуты на практике. 
+\end{document}
